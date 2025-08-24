@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "10000:10000"
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - DATABASE_URL=${DATABASE_URL}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
